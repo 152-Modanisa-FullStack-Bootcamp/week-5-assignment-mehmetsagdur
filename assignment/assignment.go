@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+/* It checks if the sum of two numbers has overflowed. */
 func AddUint32(x, y uint32) (uint32, bool) {
 	sum := x + y
 	overflow := true
@@ -18,12 +19,13 @@ func AddUint32(x, y uint32) (uint32, bool) {
 	return sum, overflow
 }
 
+/* Rounds float numbers to 0.25 */
 func CeilNumber(f float64) float64 {
-	myCeilNumber := math.Ceil(f*4) / 4
-
+	myCeilNumber := math.Ceil(f*4) / 4 // Example ceil(25.04 * 4) = 100.16 = 101 / 4 = 25.25
 	return myCeilNumber
 }
 
+/* Sorting a string expression in alphabetical order */
 func AlphabetSoup(s string) string {
 	myStringSplitArray := strings.Split(s, "")
 	sort.Strings(myStringSplitArray)
@@ -32,6 +34,7 @@ func AlphabetSoup(s string) string {
 	return justString
 }
 
+/* Code that masks with * from specific index number */
 func StringMask(s string, n uint) string {
 	myStringSplitArray := strings.Split(s, "")
 	i := 0
@@ -53,6 +56,8 @@ func StringMask(s string, n uint) string {
 	return justString
 }
 
+/* Code that compares and separates words in a string with word */
+
 func WordSplit(arr [2]string) string {
 	wordToCompare := arr[0]
 	stringDictionary := arr[1]
@@ -73,6 +78,8 @@ func WordSplit(arr [2]string) string {
 
 	return lastString
 }
+
+/* Code that deletes the same interface variadic variable */
 
 func VariadicSet(i ...interface{}) []interface{} {
 	var myInterface []interface{}
